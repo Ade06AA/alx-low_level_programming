@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
-*main -
-*return -
-*discription -
+* main - main
+* Return: 0
+* discription -
 */
 int main(void)
 {
