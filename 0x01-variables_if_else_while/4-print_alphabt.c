@@ -14,7 +14,7 @@ int main(void)
 	{
 		p = al[i];
 		putchar(p);
-	}		
+	}
 		putchar(s);
 	return (0);
 }
