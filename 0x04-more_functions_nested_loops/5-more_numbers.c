@@ -1,3 +1,4 @@
+#include "main.h"
 /**
 * more_numbers - func name
 * Return: void

@@ -1,3 +1,4 @@
+#include "main.h"
 /**
 * print_line - func name
 * Return: void
