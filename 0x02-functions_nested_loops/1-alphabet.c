@@ -1,10 +1,10 @@
-#include "main.h"
-/**
-* main - mm
-* Return; 0
-*/
-int main(void)
+
+
+void print_alphabet_x10(void)
 {
-	print_alphabet();
-	return (0);
+	int i;
+
+	for (i = 0; i <= 10; ++i)
+		print_alphabet();
 }
+
