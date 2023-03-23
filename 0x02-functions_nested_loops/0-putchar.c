@@ -1,3 +1,4 @@
+#include "main.h"
 /**
 * main - my main
 * Return: 0
@@ -9,8 +10,8 @@ int main(void)
 
 	for (i = 0; i < 8; i++)
 	{
-		putchar(s[i]);
+		_putchar(s[i]);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
