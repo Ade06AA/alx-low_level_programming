@@ -18,7 +18,7 @@ void print_alphabet_x10(void)
 }
 
 
-static int _islower(int c)
+inline int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (1);
@@ -28,7 +28,7 @@ static int _islower(int c)
 }
 
 
-static int _isalpha(int c)
+inline int _isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
