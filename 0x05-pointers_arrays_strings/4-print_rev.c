@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* rev_string - func name
+* print_rev - func name
 * @s: func arg 1
 * Return: void
 */
