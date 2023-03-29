@@ -7,12 +7,14 @@
 void _puts(char *str)
 {
 	int i;
+	char k;
 
 	for (i = 0; ; i++)
 	{
 		if (*str == '\0')
 			break;
 		str++;
+		k = *str
 		_putchar(*str);
 	}
 }
