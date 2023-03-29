@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * _puts - func name
-* @*t: func arg 1
+* @t: func arg 1
 * Return: void
 */
 void _puts(char *str)
