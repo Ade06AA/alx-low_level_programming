@@ -7,25 +7,26 @@
 int _strcmp(char *s1, char *s2)
 {
 	int i;
+	int r;
 
-	r = 0;
+	r = 100;
 	for (i = 0; ; i++)
 	{
-		if (*(s1 + i) > *(s2 + i))
+		if (*(s1 + i) != *(s2 + i))
 		{
-			r = 1;
-			break;
-		}
-		else if (*(s1 + i) < *(s2 + i))
-		{
-			r = (-1);
-			break;
+			if (*(s1 + i) > *(s2 + i))
+			{
+				r = 1;
+				break;
+			}
+			else if (*(s1 + i) < *(s2 + i))
+			{
+				r = (-1);
+				break;
+			}
 		}
 		else
-		{
 			r = 0;
-			break;
-		}
 	}
 	return (r);
 }

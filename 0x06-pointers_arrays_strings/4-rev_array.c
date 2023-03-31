@@ -7,10 +7,10 @@
 void reverse_array(int *a, int n)
 {
 	int i;
-	int g[n];
+	int g[6556];
 	int *m;
 
-	m = &g;
+	m = g;
 	for (i = 0; i < n; i++)
 		*(m + i) = *(a + i);
 	for (i = 0; i < n; i++)
