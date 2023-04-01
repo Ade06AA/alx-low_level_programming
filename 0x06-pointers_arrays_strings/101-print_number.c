@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 /**
 * print_number - func name
 * @n: func arg 1
