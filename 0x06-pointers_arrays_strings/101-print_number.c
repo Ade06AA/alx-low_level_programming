@@ -6,8 +6,6 @@
 */
 void print_number(int n)
 {
-	int i;
-
 	if (n >= 0)
 	{
 		print_number(n / 10);
@@ -16,6 +14,6 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		print_number(n * (-1);
+		print_number(n * (-1));
 	}
 }
