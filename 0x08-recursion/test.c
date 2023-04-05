@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main()
 {
-	char w[]=" ";
+	char w[]=" jhghgjk ade";
 
 	char *t = w;
 	_puts_recursion(t);
