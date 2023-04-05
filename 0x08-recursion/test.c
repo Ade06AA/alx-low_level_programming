@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main()
 {
-	char w[]="ade is a boy";
+	char w[]=" ";
 
 	char *t = w;
 	_puts_recursion(t);
