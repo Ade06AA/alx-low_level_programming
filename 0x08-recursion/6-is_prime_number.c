@@ -19,9 +19,6 @@ int is_prime_number(int n)
 {
 	int k;
 
-	if (n == 1)
-		k = 1;
-	else
-		k = 2;
+	k = 2;
 	return (prime(n, k));
 }
