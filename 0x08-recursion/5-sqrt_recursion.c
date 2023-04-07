@@ -19,5 +19,11 @@ int sr(int n, int c)
 */
 int _sqrt_recursion(int n)
 {
-	return (sr(n, 2));
+	int k;
+
+	if (n == 1)
+		k = 1;
+	else
+		k = 2;
+	return (sr(n, k));
 }
