@@ -17,11 +17,6 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	v = atoi(argv[1]);
-	if (v < 0)
-	{
-		printf("Error\n");
-		return (1);
-	}
 	for (m = 0; v != 0; m++)
 	{
 		i += 1;
