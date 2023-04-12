@@ -7,8 +7,6 @@ void positive_or_negative(int);
 int largest_number(int, int, int);
 void print_remaining_days(int, int, int);
 int convert_day(int, int);
-
-#endif /* MAIN_H */
 int _putchar(char);
 int _isupper(int c);
 int _islower(char);
@@ -55,3 +53,4 @@ int _sqrt_recursion(int);
 int is_prime_number(int);
 int wildcmp(char *a,char *b);
 int is_palindrome(char *c);
+#endif /* MAIN_H */
