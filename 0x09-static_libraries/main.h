@@ -11,6 +11,8 @@ int convert_day(int, int);
 #endif /* MAIN_H */
 int _putchar(char);
 int _isupper(int c);
+int _islower(char);
+int _isalpha(char);
 int _isdigit(int c);
 int mul(int, int);
 void print_numbers(void);
