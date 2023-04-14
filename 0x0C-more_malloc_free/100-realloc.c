@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <string.h>
-#include "main.h"
 /**
 * _realloc - func name
 * @ptr: func arg 1
@@ -10,11 +9,10 @@
 */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *r;
-	char *c;
-	int i;
+	void *r;
 
-	c = ptr;
+	r = malloc(new_size);
+
 	if (old_size == new_size)
 		return (ptr);
 	if (ptr == NULL)
@@ -24,13 +22,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (0);
 	}
-	r = malloc(new_size);
 	if (r == NULL)
-		return (0);
-	/*if (old_size > 0)*/
-		/*memcpy(r, ptr, old_size);*/
-	for (i = 0; i < (old_size) || i < (new_size); i++)
-		*(r + i) = c[i];
+		return (0i);
+	if (new_size <= old_size)
+		return (ptr);
+
+	if (old_size > 0)
+		memcpy(r, ptr, old_size);
 	free(ptr);
 	return (r);
 }
