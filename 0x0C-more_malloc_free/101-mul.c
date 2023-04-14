@@ -42,12 +42,12 @@ int main(int ac, char **av)
 	if (ac != 3)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 	if ((is_not_number(av[1]) || is_not_number(av[2])))
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 	printf("%d\n", mul(av[1], av[2]));
 	return (0);
