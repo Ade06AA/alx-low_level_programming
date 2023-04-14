@@ -7,12 +7,12 @@
 * @b: func b
 * Return: int
 */
-int mul(char *a, char *b)
+long int mul(char *a, char *b)
 {
 	int c, d;
 
-	c = atoi(a);
-	d = atoi(b);
+	c = atol(a);
+	d = atol(b);
 	return (c * d);
 }
 /**
@@ -49,6 +49,6 @@ int main(int ac, char **av)
 		printf("Error\n");
 		exit(98);
 	}
-	printf("%d\n", mul(av[1], av[2]));
+	printf("%lu\n", mul(av[1], av[2]));
 	return (0);
 }
