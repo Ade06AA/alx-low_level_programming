@@ -1,6 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+* filter - func name
+* @argc: func arg 1
+* @v: func arg 2
+* Return: 0
+*/
+int filter(int argc, int v)
+{
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	if (v  < 0)
+	{
+		putchar('0');
+		putchar('\n');
+		exit(1);
+	}
+	return (0);
+}
+
+/**
 * main - func name
 * @argc: func arg 1
 * @argv: func arg 2
@@ -11,18 +33,11 @@ int main(int argc, char **argv)
 	int i, v, m;
 
 	i = 0;
-	if (argc != 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	v = atoi(argv[1]);
-	if (v  < 0)
-	{
-		putchar('0');
-		putchar('\n');
-		return (1);
-	}
+	if (argc != 1)
+		v = atoi(argv[1]);
+	else
+		v = 0;
+	filter(argc, v);
 	for (m = 0; v != 0; m++)
 	{
 		i += 1;
