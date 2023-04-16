@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "main.h"
 #include <stdlib.h>
 /**
@@ -9,11 +10,7 @@
 char *argstostr(unsigned int aac, char **aa)
 {
 	char *m;
-	int i;
-	int a;
-	int j;
-	int t;
-	int f;
+	int i, a, j, t, f;
 
 	if (aac == 1)
 		return (NULL);
@@ -25,10 +22,10 @@ char *argstostr(unsigned int aac, char **aa)
 			return (NULL);
 		for (j = 0; aa[f][j] != '\0'; j++)
 		{
-			t+=1;
+			t += 1;
 		}
 	}
-	m = malloc((sizeof(char) * t)-4);
+	m = malloc((sizeof(char) * t) - 4);
 	if (m == NULL)
 	{
 		free(m);
