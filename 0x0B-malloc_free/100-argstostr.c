@@ -45,5 +45,6 @@ char *argstostr(unsigned int aac, char **aa)
 		}
 
 	}
+	m[a] = '\0';
 	return (m);
 }
