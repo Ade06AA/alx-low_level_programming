@@ -25,7 +25,7 @@ char *argstostr(unsigned int aac, char **aa)
 			t += 1;
 		}
 	}
-	m = malloc((sizeof(char) * t) - 4);
+	m = malloc((sizeof(char) * t + aac));
 	if (m == NULL)
 	{
 		free(m);
