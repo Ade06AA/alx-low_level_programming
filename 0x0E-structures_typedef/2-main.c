@@ -9,7 +9,7 @@ int main(void)
 {
     struct dog my_dog;
 
-    my_dog.name = "a";
+    my_dog.name = '\0';
     my_dog.age = 0.0;
     my_dog.owner = "Bob";
     print_dog(&my_dog);
