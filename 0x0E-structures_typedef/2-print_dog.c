@@ -14,6 +14,7 @@ void print_dog(Dog *d)
 		return;
 	printf("Name:");
 	printf("%s\n", (d->name == NULL || d->name == 0) ? "(nil)" : d->name);
+
 	if (&(d->age) == NULL || d->age == 0.0)
 		printf("Age: (nil)\n");
 	else
