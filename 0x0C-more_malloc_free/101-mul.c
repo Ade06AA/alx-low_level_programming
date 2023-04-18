@@ -7,12 +7,12 @@
 * @b: func b
 * Return: int
 */
-long int mul(char *a, char *b)
+unsigned long int mul(char *a, char *b)
 {
-	int c, d;
+	unsigned long int c, d;
 
-	c = atol(a);
-	d = atol(b);
+	c = strtoul(a, NULL, 10);
+	d = strtoul(b, NULL, 10);
 	return (c * d);
 }
 /**

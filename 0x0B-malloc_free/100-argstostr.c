@@ -26,6 +26,7 @@ char *argstostr(unsigned int aac, char **aa)
 		}
 	}
 	m = malloc(sizeof(char) * (t + aac));
+
 	if (m == NULL)
 	{
 		free(m);
