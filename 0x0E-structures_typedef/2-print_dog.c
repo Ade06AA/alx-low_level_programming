@@ -11,11 +11,11 @@
 void print_dog(Dog *d)
 {
 	printf("Name:");
-	printf("%s\n", (&(d->name) == NULL || d->name == 0) ? "(nill)" : d->name);
+	printf("%s\n", (&(d->name) == NULL || d->name == 0) ? "(nil)" : d->name);
 	if (&(d->age) == NULL || d->age == 0.0)
-		printf("Age: (nill)\n");
+		printf("Age: (nil)\n");
 	else
 		printf("Age: %f\n", d->age);
 	printf("Owner:");
-	printf("%s\n", (&(d->owner) == NULL || d->owner == 0) ? "(nill)" : d->owner);
+	printf("%s\n", (&(d->owner) == NULL || d->owner == 0) ? "(nil)" : d->owner);
 }
