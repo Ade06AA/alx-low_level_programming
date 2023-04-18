@@ -10,7 +10,12 @@
 */
 void print_dog(Dog *d)
 {
-	printf("Name: %s\n", (*d).name == NULL ? "nill" : "ade");
-	printf("Age: %f\n", d->age);
-	printf("Owner: %s\n", d->owner);
+	printf("Name:");
+	printf("%s\n", (&(d->name) == NULL || d->name == 0) ? "(nill)" : d->name);
+	if (&(d->age) == NULL || d->age == 0.0)
+		printf("Age: (nill)\n");
+	else
+		printf("Age: %f\n", d->age);
+	printf("Owner:");
+	printf("%s\n", (&(d->owner) == NULL || d->owner == 0) ? "(nill)" : d->owner);
 }
