@@ -15,7 +15,11 @@
 */
 void init_dog(Dog *d, char *name, float age, char *owner)
 {
-	*d = (Dog) {name, age, owner};
+	/**d = (Dog) {name, age, owner};*/
+	/*line 18 -> error: ISO C90 forbids compound literals [-Werror=pedantic]*/
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
 
 
