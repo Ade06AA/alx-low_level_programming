@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
 * print_list - func name
 * @h: func arg 1
@@ -6,18 +6,18 @@
 */
 size_t print_list(const list_t *h)
 {
+	int l;
+	char *s;
 	size_t a = 0;
 
-	if ( )
-		printf("[0] (nill)\n");
-
-	while (h -> next != NULL)
+	while (h != NULL)
 	{
-		l = h -> len;
-		s = h -> str;
-		printf("[%d] (%s)\n", (s == NULL) ? (0, "nill") : (l, s));
-		h = h -> next;
-		i++;
+		s = h->str;
+		l = (s == NULL) ? 0 : h->len;
+		s = (s == NULL) ? "(nill)" : s;
+		printf("[%d] %s\n", l, s);
+		h = h->next;
+		a++;
 	}
 	return (a);
 }
