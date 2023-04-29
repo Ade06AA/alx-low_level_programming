@@ -11,7 +11,7 @@ void free_list(list_t *h)
 	while ((c = h) != NULL)
 	{
 		h = h->next;
-		free(c->str);
-		c = NULL;
+		/*free(c->str);*/
+		free(c);
 	}
 }
