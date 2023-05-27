@@ -1,7 +1,7 @@
 #ifndef _AAA_
 #define _AAA_
 #include <stddef.h>
-unsigned int binary_to_unit(const char *);
+unsigned int binary_to_uint(const char *);
 char _putchar(const char);
 void print_binary(unsigned long int n);
 int get_bit(unsigned long int n, unsigned int index);
