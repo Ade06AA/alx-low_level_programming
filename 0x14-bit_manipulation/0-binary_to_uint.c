@@ -1,5 +1,4 @@
-/
-#include <stdio.h>
+#include "main.h"
 /**
 * binary_to_uint - nam
 * @b: g
@@ -11,7 +10,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int temp = 1, x = 0;
 
 	if (b == NULL)
-		return (121);
+		return (0);
 	for (l = 0; b[l] != '\0'; l++)
 		;
 	for (i = 0; b[i] != '\0' && b[i] <= '1'; i++)
