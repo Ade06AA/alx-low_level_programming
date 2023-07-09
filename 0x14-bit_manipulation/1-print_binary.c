@@ -1,15 +1,16 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
-* pow - n
-* @n: n
+* mpow - n
+* @p: n
+* @i: n
 * Return: bn
 */
 unsigned long int mpow(unsigned long int p, int i)
 {
-	for ( ; i - 1; i--)
-		p *= p;
+	int temp = p;
+
+	for ( ; i > 1; i--)
+		p *= temp;
 	return (p);
 }
 /**
@@ -22,15 +23,14 @@ void print_binary(unsigned long int n)
 	unsigned long int i, s = 0, h = 1;
 	int e, u;
 
-	for (i = 0; ; i++)
+	(n > 0) ? putchar('1') : putchar('0');
+
+	for (i = 0; h * 2 <= n ; i++)
 	{
-		if (i > 11)
-			break;
-		if (n >= h && (h * 2) > n)
+		if (n >= h && (h * 4) > n)
 		{
-			putchar('1');
-			s = h;
-			for (e = i - 1; e; e--)
+			s = h * 2;
+			for (e = i; e > 0; e--)
 			{
 				u = mpow(2, e);
 				if ((s + u) > n)
@@ -41,7 +41,7 @@ void print_binary(unsigned long int n)
 					putchar('1');
 				}
 			}
-			(s + 1 > n) ? putchar('0') : putchar('1');
+			(n == s) ? putchar('0') : putchar('1');
 			return;
 		}
 		else

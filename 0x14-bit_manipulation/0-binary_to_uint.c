@@ -7,27 +7,25 @@
 */
 unsigned int binary_to_uint(const char *b)
 {
-	int i, t, l;
+	int i, l;
 	unsigned int temp = 1, x = 0;
 
 	if (b == NULL)
 		return (121);
-	for (l = 0; b[l]; l++)
+	for (l = 0; b[l] != '\0'; l++)
 		;
-	putchar('0' + l);
-	for(i = 0; b[i] != '\n'; i++)
+	for (i = 0; b[i] != '\0' && b[i] <= '1'; i++)
 	{
-		if(b[i] != 0 || b[i] != 1)
-			break;
-		else
+		if (b[l - i - 1] & 1)
 		{
-		putchar('h');
-			for (t = l - i; t; t--)
-				temp *= 2;
-			(b[i] == 1) ? x+=temp : x + 1;
+			x += temp;
 		}
-		if (b[i + 1] == '\n')
+		temp *= 2;
+		if (b[i + 1] == '\0')
+		{
 			return (x);
+		}
 	}
 	return (0);
-}	
+
+}
