@@ -23,7 +23,7 @@ void print_binary(unsigned long int n)
 	unsigned long int i, s = 0, h = 1;
 	int e, u;
 
-	(n > 0) ? putchar('1') : putchar('0');
+	(n > 0) ? _putchar('1') : _putchar('0');
 
 	for (i = 0; h * 2 <= n ; i++)
 	{
@@ -34,14 +34,14 @@ void print_binary(unsigned long int n)
 			{
 				u = mpow(2, e);
 				if ((s + u) > n)
-					putchar('0');
+					_putchar('0');
 				else
 				{
 					s += u;
-					putchar('1');
+					_putchar('1');
 				}
 			}
-			(n == s) ? putchar('0') : putchar('1');
+			(n == s) ? _putchar('0') : _putchar('1');
 			return;
 		}
 		else
