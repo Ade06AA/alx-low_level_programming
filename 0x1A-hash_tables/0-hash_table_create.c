@@ -12,14 +12,14 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_node_t **array;
 
 	if (size < 1)
-		return NULL;
+		return (NULL);
 	array = calloc(size, sizeof(hash_node_t));
 	if (!array)
-		return NULL;
+		return (NULL);
 	new = malloc(sizeof(hash_table_t));
 	new->size = size;
 	new->array = array;
 	for (i = 0; i < size; i++)
 		array[i] = NULL;
-	return new;
+	return (new);
 }

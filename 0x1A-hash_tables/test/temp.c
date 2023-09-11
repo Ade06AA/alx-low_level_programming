@@ -167,7 +167,7 @@ int main(int argc, char *argv[])
 	char *vv;
 	printf("1\n");
 	hash_table_print(NULL);	
-	hash_table_t *tt = Thash_table_create(1024);
+	hash_table_t *tt = Thash_table_create(124);
 	printf("2\n");
 	hash_table_print(tt);
 	

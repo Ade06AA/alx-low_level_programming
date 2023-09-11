@@ -15,5 +15,5 @@ unsigned long int key_index(const unsigned char *key, unsigned long int s)
 	for (i = 0; key[i]; i++)
 		hash = ((hash * key[i]) << 3) + key[i];
 	hash = hash % s;
-	return hash;
+	return (hash);
 }
