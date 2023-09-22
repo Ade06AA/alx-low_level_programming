@@ -26,7 +26,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 	new->next = NULL;
-	hash = key_index(key, ht->size);
+	hash = key_index((const unsigned char *)key, ht->size);
 	if ((ht->array)[hash] == NULL)
 		(ht->array)[hash] = new;
 	else
