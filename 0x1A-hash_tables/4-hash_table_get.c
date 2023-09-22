@@ -1,4 +1,4 @@
-#include "hash_table.h"
+#include "hash_tables.h"
 
 /**
 * hash_table_get - get value of a paticular key

@@ -1,4 +1,4 @@
-#include "hash_table"
+#include "hash_tables.h"
 
 /**
 * hash_table_set - add a key and value pair to a table

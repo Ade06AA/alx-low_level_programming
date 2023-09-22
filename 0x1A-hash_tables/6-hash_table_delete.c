@@ -1,4 +1,4 @@
-#include "hash_table.h"
+#include "hash_tables.h"
 
 /**
 * free_node - fress a node
