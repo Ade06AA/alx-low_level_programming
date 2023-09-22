@@ -1,27 +1,6 @@
 #include "hash_tables.h"
 
 /**
-* free_node - fress a node
-* @n: the node to be freed
-* Return: void
-*/
-void free_node(hash_node_t *n)
-{
-	hash_node_t *node;
-
-	node = n;
-	while (node != NULL)
-	{
-		node = n->next;
-		free(n->key);
-		free(n->value);
-		free(n);
-		n = NULL;
-		n = node;
-	}
-}
-
-/**
 * hash_table_delete - delete a hash table
 * @ht: hash table to be deleteted
 * Return: void
