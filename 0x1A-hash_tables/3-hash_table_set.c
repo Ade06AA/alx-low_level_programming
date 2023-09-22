@@ -1,6 +1,28 @@
 #include "hash_tables.h"
 
 /**
+* free_node - fress a node
+* @n: the node to be freed
+* Return: void
+*/
+void free_node(hash_node_t *n)
+{
+	hash_node_t *node;
+
+	node = n;
+	while (node != NULL)
+	{
+		node = n->next;
+		free(n->key);
+		free(n->value);
+		free(n);
+		n = NULL;
+		n = node;
+	}
+}
+
+
+/**
 * hash_table_set - add a key and value pair to a table
 * @ht: the table to be updated
 * @key: the element kay
@@ -29,6 +51,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash = key_index((const unsigned char *)key, ht->size);
 	if ((ht->array)[hash] == NULL)
 		(ht->array)[hash] = new;
+	else if (strcmp(key, (ht->array)[hash]->key) == 0)
+	{
+		free_node((ht->array)[hash]);
+		(ht->array)[hash] = new;
+	}
 	else
 	{
 		new->next = (ht->array)[hash];
