@@ -9,11 +9,12 @@
 */
 unsigned long int key_index(const unsigned char *key, unsigned long int s)
 {
-	int i;
+	int i, c;
 	unsigned long int hash = 5381;
 
-	for (i = 0; key[i]; i++)
-		hash = ((hash * key[i]) << 3) + key[i];
-	hash = hash % s;
-	return (hash);
+	for (i = 0; (c = str[i]); i++)
+	{
+		hash = ((hash << 5) + hash) + c;
+	}
+	return (hash % s);
 }
