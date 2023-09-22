@@ -12,7 +12,7 @@ unsigned long int key_index(const unsigned char *key, unsigned long int s)
 	int i, c;
 	unsigned long int hash = 5381;
 
-	for (i = 0; (c = str[i]); i++)
+	for (i = 0; (c = key[i]); i++)
 	{
 		hash = ((hash << 5) + hash) + c;
 	}
