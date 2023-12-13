@@ -10,24 +10,20 @@
 int binary_search(int *array, size_t size, int value)
 {
 	/* c for center */
-	size_t c, t;
+	ssize_t c, t;
 
-	if (!array || size < 0)
+	if (!array)
 		return (-1);
 	printf("Searching in array:");
-	for (c = 0; c < size; c++)
+	for (c = 0; c < (ssize_t)size; c++)
 	{
 		printf(" %d", array[c]);
-		if (c == size - 1)
+		if (c == (ssize_t)size - 1)
 			printf("\n");
 		else
 			printf(",");
 	}
-	printf("val = %d\n", value);
-
-	c = (size % 2 == 0) ? size / 2 - 1: size / 2;
-
-	printf("c = %d /2 = %d, ===== %d\n",size, size / 2, array[c]);
+	c = (size % 2 == 0) ? size / 2 - 1 : size / 2;
 	if (value == array[c] || size == 1)
 	{
 		return ((value == array[c]) ? c : -1);
@@ -35,17 +31,22 @@ int binary_search(int *array, size_t size, int value)
 	else if (value > array[c])
 	{
 		if (size % 2 == 0)
-			return((binary_search(array + c + 1, c + 1,value) != -1) ? 1 + c + binary_search(array + c + 1, c + 1,value) : -1);
+		{
+			t = binary_search(array + c + 1, c + 1, value);
+			return ((t != -1) ? 1 + c + t : -1);
+		}
 		else
-			return((binary_search(array + c + 1, c,value) != -1) ? 1 + c + binary_search(array + c + 1, c,value) : -1);
+		{
+			t = binary_search(array + c + 1, c, value);
+			return ((t != -1) ? 1 + c + t : -1);
+		}
 	}
 	else
 	{
 		if (size % 2 == 0)
-			return(binary_search(array, c,value));
+			return ((c == 0) ? -1 : binary_search(array, c, value));
 		else
-			return(binary_search(array, c - 1,value));
+			return ((c == 1) ? -1 : binary_search(array, c, value));
 	}
-
 	return (-1);
 }
