@@ -109,7 +109,7 @@ You can now type betty <filename> to run the Betty linter!
 > 
 >   + The C file name will be saved in the variable $CFILE
 >   + The output file should be named the same as the C file, but with the extension .o instead of .c.
->   + + Example: if the C file is main.c, the output file should be main.o
+>      + Example: if the C file is main.c, the output file should be main.o
 > ```
 > julien@ubuntu:~/c/0x00$ export CFILE=main.c
 > julien@ubuntu:~/c/0x00$ cat main.c
@@ -139,7 +139,7 @@ You can now type betty <filename> to run the Betty linter!
 > 
 >   + The C file name will be saved in the variable $CFILE
 >   + The output file should be named the same as the C file, but with the extension .s instead of .c.
->   + + Example: if the C file is main.c, the output file should be main.s
+>      + Example: if the C file is main.c, the output file should be main.s
 > ```
 > julien@ubuntu:~/c/0x00$ export CFILE=main.c
 > julien@ubuntu:~/c/0x00$ cat main.c
@@ -269,7 +269,7 @@ You can now type betty <filename> to run the Betty linter!
 > 
 >   + The C file name will be saved in the variable $CFILE.
 >   + The output file should be named the same as the C file, but with the extension .s instead of .c.
->   + + Example: if the C file is main.c, the output file should be main.s
+>      + Example: if the C file is main.c, the output file should be main.s
 > ```
 > julien@ubuntu:~/c/0x00$ export CFILE=main.c
 > julien@ubuntu:~/c/0x00$ cat main.c
